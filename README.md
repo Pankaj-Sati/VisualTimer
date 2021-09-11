@@ -6,6 +6,8 @@ Implementation of a simple timer with 2 approaches:
 
 ###### (Demo uses requestAnimationFrame approach)
 
+#### Note: requestAnimationFrame() calls are paused in most browsers when running in background tabs
+
 ## Tech Stack
 - Javascript
 - CSS
