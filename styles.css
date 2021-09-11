@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --text-n:64px;
+  --text-sm:0.8rem;
+  --text-xsm:0.5rem;
+  --text-lg:1.5rem;
+  --primary-color:hsl(180, 8%, 55%);
+  --primary-black:hsl(0, 0%, 11%);
+  --accent-color:hsl(180, 100%, 99%);
+  --box-size:72px;
+}
+
+html,body{
+  margin:0;
+  padding: 0;
+  font-size:var(--text-n);
+}
+
+
+/* All number boxes container */
+
+#numberContainer{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#numberContainer .box{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  border:1px solid var(--primary-black);
+  height: var(--box-size);
+  overflow-y: hidden;
+  justify-content: flex-start;
+  /* scroll-behavior: smooth; */
+}
+
+#numberContainer .box .num{
+  width: var(--box-size);
+  height: var(--box-size);
+  text-align: center;
+}
+
+/* Log Container */
+.logContainer{
+  background-color: antiquewhite;
+  text-align: center;
+  font-size: var(--text-xsm);
+}
