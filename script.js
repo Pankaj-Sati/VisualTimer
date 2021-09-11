@@ -2,7 +2,7 @@ let milisecond=0; //Initializeing the counter
 let timingInterval=200; //Milisecond interval
 let totalBoxes=10;
 let boxDimention=72; //In pixels
-let noOfScrollFrames=24; //The number of frames for which we want the scroll to happen
+let noOfScrollFrames=4; //The number of frames for which we want the scroll to happen
 let prevTimerValue="0"; //To check when to scroll
 var timeLogger; //The reference to the actual timer for logging
 var numberContainer; //The container reference of the number boxes
@@ -76,7 +76,6 @@ function smoothScroll(node,start=0)
     window.requestAnimationFrame((time)=>{
         
         start++;
-        console.log('Called for node',node,start);
         node.scrollTop+=(boxDimention/noOfScrollFrames);
         if(start<noOfScrollFrames)
         {
