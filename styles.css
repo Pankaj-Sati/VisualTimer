@@ -6,7 +6,7 @@
   --text-lg:1.5rem;
   --primary-color:hsl(180, 8%, 55%);
   --primary-black:hsl(0, 0%, 11%);
-  --accent-color:hsl(180, 100%, 99%);
+  --accent-color:hsl(208, 71%, 61%);
   --box-size:72px;
 }
 
@@ -18,11 +18,12 @@ html,body{
 
 /* Heading */
 .title{
-     text-align: center;
+    text-align: center;
     font-size: var(--text-xsm);
     color: white;
-    background-color: rgb(123 174 219);
+    background-color: var(--accent-color);
     padding: 10px;
+    margin-bottom: 40px;
 }
 
 /* All number boxes container */
@@ -56,4 +57,20 @@ html,body{
   background-color: antiquewhite;
   text-align: center;
   font-size: var(--text-xsm);
+}
+
+
+/* Footer Link */
+.githubLink{
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100vw;
+  padding: 15px;
+}
+
+.githubLink>a{
+  font-size: var(--text-xsm);
+  text-decoration: none;
+  color: var(--accent-color);
 }
