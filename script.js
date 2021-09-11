@@ -2,7 +2,7 @@ let milisecond=0; //Initializeing the counter
 let timingInterval=200; //Milisecond interval
 let totalBoxes=10;
 let boxDimention=72; //In pixels
-let noOfScrollFrames=6; //The number of frames for which we want the scroll to happen
+let noOfScrollFrames=24; //The number of frames for which we want the scroll to happen
 let prevTimerValue="0"; //To check when to scroll
 var timeLogger; //The reference to the actual timer for logging
 var numberContainer; //The container reference of the number boxes
