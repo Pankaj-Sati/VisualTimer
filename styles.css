@@ -16,6 +16,11 @@ html,body{
   font-size:var(--text-n);
 }
 
+/* Heading */
+.title{
+  text-align:center;
+  padding: 10px;
+}
 
 /* All number boxes container */
 
