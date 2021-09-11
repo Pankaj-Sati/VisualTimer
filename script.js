@@ -105,8 +105,10 @@ function timerFn()
 /**
  * Timer function but using window.requestAnimationFrame
  */
-function timerFn2(){
+function timerFn2(count=0){
     window.requestAnimationFrame((time)=>{
+        console.log('Times Called',count%100,time/1000);
+        count++;
         let str=time.toString().split('.');
         str=(parseInt(str[0]/1000))+''; //Getting only the seconds
         timeLogger.innerHTML=str;
@@ -115,6 +117,6 @@ function timerFn2(){
          scrollToNumber(numberContainer.children[str.length-i-1],str.charAt(i),(prevTimerValue.charAt(i) || '0')); 
         }
         prevTimerValue=str;
-        timerFn2(); //Constantly call the timer again and again before browser repaints the frame
-     },timingInterval)
+        timerFn2(count); //Constantly call the timer again and again before browser repaints the frame
+     })
 }
