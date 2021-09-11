@@ -18,8 +18,11 @@ html,body{
 
 /* Heading */
 .title{
-  text-align:center;
-  padding: 10px;
+     text-align: center;
+    font-size: var(--text-xsm);
+    color: white;
+    background-color: rgb(123 174 219);
+    padding: 10px;
 }
 
 /* All number boxes container */
