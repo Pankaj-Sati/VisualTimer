@@ -71,15 +71,15 @@ function scrollToNumber(boxNode,number,prevNumber)
  * Implements the actual scroll smooth logic for a given node
  * @param {*} node Node that we want to scroll
  */
-function smoothScroll(node,start=0)
+function smoothScroll(node,count=0)
 {
     window.requestAnimationFrame((time)=>{
         
-        start++;
+        count++;
         node.scrollTop+=(boxDimention/noOfScrollFrames);
-        if(start<noOfScrollFrames)
+        if(count<noOfScrollFrames)
         {
-            smoothScroll(node,start);
+            smoothScroll(node,count);
         }  
     });
 }
@@ -105,10 +105,8 @@ function timerFn()
 /**
  * Timer function but using window.requestAnimationFrame
  */
-function timerFn2(count=0){
+function timerFn2(){
     window.requestAnimationFrame((time)=>{
-        console.log('Times Called',count%100,time/1000);
-        count++;
         let str=time.toString().split('.');
         str=(parseInt(str[0]/1000))+''; //Getting only the seconds
         timeLogger.innerHTML=str;
@@ -117,6 +115,6 @@ function timerFn2(count=0){
          scrollToNumber(numberContainer.children[str.length-i-1],str.charAt(i),(prevTimerValue.charAt(i) || '0')); 
         }
         prevTimerValue=str;
-        timerFn2(count); //Constantly call the timer again and again before browser repaints the frame
+        timerFn2(); //Constantly call the timer again and again before browser repaints the frame
      })
 }
